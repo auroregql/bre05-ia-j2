@@ -1,0 +1,99 @@
+QUESTION :
+
+Identifie le problème majeur du code suivant et trouve une solution viable pour y remédier : 
+
+traitement.php
+<?php
+
+$user_input = $_GET['user_id']; $query = "SELECT * FROM users WHERE id = $user_input"; $result = mysqli_query($conn, $query); echo "Utilisateur trouvé : " . $user_input;
+
+?>
+
+
+fetch.js
+function fetchData(id) {
+    const url = 'traitement.php?user_id=' + id;
+    fetch(url)
+      .then(response => response.json())
+      .then(data => console.log(data));
+}
+
+REPONSE :
+
+🚨 Problème majeur
+
+Le problème majeur de ce code est une faille d’injection SQL dans le fichier traitement.php.
+
+$user_input = $_GET['user_id'];
+$query = "SELECT * FROM users WHERE id = $user_input";
+
+
+👉 La donnée user_id provient directement de l’utilisateur (URL) et est injectée sans validation ni protection dans la requête SQL.
+
+Un attaquant peut appeler par exemple :
+
+traitement.php?user_id=1 OR 1=1
+
+
+Ce qui produira :
+
+SELECT * FROM users WHERE id = 1 OR 1=1
+
+
+➡️ Résultat : exposition de toutes les données de la table users
+➡️ Gravité : critique (sécurité)
+
+✅ Solution viable
+1️⃣ Utiliser des requêtes préparées (obligatoire)
+
+Les requêtes préparées empêchent toute interprétation malveillante de l’entrée utilisateur.
+
+<?php
+header('Content-Type: application/json');
+
+$stmt = $conn->prepare("SELECT * FROM users WHERE id = ?");
+$stmt->bind_param("i", $_GET['user_id']); // i = integer
+$stmt->execute();
+
+$result = $stmt->get_result();
+$user = $result->fetch_assoc();
+
+echo json_encode($user);
+?>
+
+
+🔐 Bénéfices :
+
+Protection contre l’injection SQL
+
+Typage strict des paramètres
+
+Code sécurisé et maintenable
+
+⚠️ Problème secondaire (fonctionnel)
+
+Dans fetch.js :
+
+.then(response => response.json())
+
+
+Mais le PHP renvoyait :
+
+echo "Utilisateur trouvé : " . $user_input;
+
+
+➡️ Ce n’est pas du JSON, ce qui provoque une erreur côté JavaScript.
+
+✅ La solution ci-dessus corrige aussi ce point en renvoyant du JSON valide avec le bon header.
+
+🧠 Résumé
+Problème    Impact    Solution
+Injection SQL    🔴 Critique    Requêtes préparées
+Données utilisateur non filtrées    🔴 Critique    Binding + typage
+Réponse non JSON    🟠 Moyenne    json_encode() + header
+
+👉 Bonne pratique clé :
+
+Ne jamais faire confiance aux données utilisateur et toujours utiliser des requêtes préparées.
+
+Si tu veux, je peux aussi proposer une version avec PDO, souvent recommandée en environnement professionnel.

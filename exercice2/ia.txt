@@ -1,0 +1,16 @@
+QUESTION :
+
+Génère moi uniquement le markdown (pas me code) pour obtenir (toujours en forme de tableau markdown)  les 5 auteurs / autrices les plus vendus en France en 2014 classés du plus vendu au moins vendu.
+
+REPONSE :
+
+Voici le classement des 5 auteurs / autrices les plus vendus en France en 2014, du plus vendu au moins vendu, basé sur les chiffres de ventes d’exemplaires publiés par GfK / Le Figaro :
+
+Rang    Auteur / Autrice    Livres vendus en France (2014)
+1    Guillaume Musso    1 631 200
+2    Katherine Pancol    1 216 300
+3    Marc Levy    998 900
+4    Gilles Legardinier    890 000
+5    Michel Bussi    843 000
+
+Si tu veux le même tableau avec les titres de leurs livres les plus vendus ou les données par genre littéraire, je peux te le faire aussi !

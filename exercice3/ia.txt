@@ -1,0 +1,16 @@
+QUESTION : 
+
+Génère moi uniquement le markdown (pas me code), sous forme de tableau Markdown, 5 liens de resources en français, datant de moins de 5 ans, qui expliquent l'implémentation de la POO en JavaScript Vanilla.
+
+REPONSE : 
+
+Titre / Description    Lien
+1    Tutoriel complet sur JavaScript moderne incluant la POO (objets, méthodes, classes, prototypes) – guide en français régulièrement mis à jour.    https://fr.javascript.info/
+
+2    Article détaillé sur les méthodes d’objet en JavaScript et introduction à la POO avec this et objets littéraux.    https://fr.javascript.info/object-methods
+
+3    Article récent sur les objets et fondements de la POO en JavaScript — concepts, prototypes et création d’objets.    https://ichi.pro/fr/objets-et-fondements-de-la-poo-en-javascript-277011657439153
+
+4    Guide Améliorez vos compétences en JavaScript avec la magie de la POO — initiation aux classes, héritage et objets en Vanilla JS.    https://ichi.pro/fr/ameliorez-vos-competences-en-javascript-avec-la-magie-de-la-poo-23135627571854
+
+5    Article MDN sur l’héritage et les classes en JavaScript (orienté objet), expliquant comment créer des classes et faire de l’héritage en Vanilla JS.    https://developer.mozilla.org/fr/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript

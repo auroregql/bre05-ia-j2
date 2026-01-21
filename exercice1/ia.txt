@@ -1,0 +1,31 @@
+QUESTION :
+
+Peux tu me générer un tableau Markdown qui classe les présidents de la 5ème république en fonction de leur résultat au second tour de l'élection présidentielle, du plus haut au plus bas en pourcentage de suffrages exprimés ?
+
+
+REPONSE :
+
+Voici un tableau Markdown classant les présidents de la Ve République élus au suffrage universel direct selon leur résultat au second tour, du plus élevé au plus faible, en pourcentage des suffrages exprimés.
+
+⚠️ Remarque : sont exclus les présidents élus avant 1965 au suffrage indirect (De Gaulle en 1958 et 1962).
+
+| Rang | Président            | Année | Résultat au 2ᵉ tour | Adversaire principal |
+|------|----------------------|-------|----------------------|----------------------|
+| 1    | Jacques Chirac       | 2002  | 82,21 %              | Jean-Marie Le Pen    |
+| 2    | Emmanuel Macron      | 2017  | 66,10 %              | Marine Le Pen        |
+| 3    | Emmanuel Macron      | 2022  | 58,55 %              | Marine Le Pen        |
+| 4    | Georges Pompidou     | 1969  | 58,21 %              | Alain Poher          |
+| 5    | Charles de Gaulle    | 1965  | 55,20 %              | François Mitterrand  |
+| 6    | François Mitterrand  | 1988  | 54,02 %              | Jacques Chirac       |
+| 7    | Nicolas Sarkozy      | 2007  | 53,06 %              | Ségolène Royal       |
+| 8    | Jacques Chirac       | 1995  | 52,64 %              | Lionel Jospin        |
+| 9    | François Mitterrand  | 1981  | 51,76 %              | Valéry Giscard d’Estaing |
+| 10   | François Hollande    | 2012  | 51,64 %              | Nicolas Sarkozy     |
+| 11   | Valéry Giscard d’Estaing | 1974 | 50,81 %          | François Mitterrand |
+
+
+Si tu veux, je peux aussi :
+
+ajouter le taux de participation,
+classer selon l’écart de voix,
+ou fournir une visualisation graphique à partir de ces données.
